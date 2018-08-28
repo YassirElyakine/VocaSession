@@ -1,0 +1,12 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+form.row {
+    margin-top: 25px;
+}
+p {
+    transition: 100ms all linear;
+    padding: 25px;
+    margin-top: 0;
+}

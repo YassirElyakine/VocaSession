@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <title>VocaSession</title>
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- VocaSession.css file LOCAL -->
+    <link rel='stylesheet' type='text/css' href='{% static "stylesheets/VocaSession.css" %}'>
+</head>
+
+<body class='light-blue'>
+    <div class="actions_area">
+        <button class="btn light-blue darken-4 z-depth-0 action" id='add_vocabulary'>Add</button>
+        <button class="btn light-blue darken-4 z-depth-0 action" id='edit_vocabulary'>Edit</button>
+        <button class="btn light-blue darken-4 z-depth-0 action" id='delete_vocabulary'>Delete</button>
+    </div>
+    <div class="vocabulary_showcase_container row">
+        {% for vocabulary in vocabularies %}
+        <div class="vocabulary_showcase light-blue darken-4 col s12 m6 l4">
+            <span class="vocabulary_name white-text">{{vocabulary.title}}</span>
+            <div class="vocabulary_meaning white-text">
+                {{vocabulary.meaning}}
+            </div>
+            <button class="btn light-blue z-depth-0 add_to_list"><i class='material-icons'>add</i></button>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    <footer>
+        <button class='btn red hide-on-med-and-down' id='logout_btn'>Logout</button>
+        <button class="btn red hide-on-large-only transparent" id='logout_btn_mobile'>Logout</button>
+    </footer>
+    <!-- Jquery CDN -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <!-- VocaSession.js file LOCAL -->
+    <script src='{% static "scripts/VocaSession.js" %}'></script>
+    <!-- redirect.js file LOCAL -->
+    <script src='{% static "scripts/redirect.js" %}'></script>
+</body>
+
+</html>

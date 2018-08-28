@@ -1,0 +1,10 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+form.row {
+    margin-top: 25px;
+}
+form > button.btn {
+    margin-top: 5px;
+}

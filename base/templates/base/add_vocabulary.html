@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <title>Add vocabulary</title>
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- add_vocabulary.html file LOCAL -->
+    <link rel='stylesheet' type='text/css' href='{% static "stylesheets/add_vocabulary.css" %}'>
+    </head>
+
+<body>
+    <a href='/' class="btn light-blue z-depth-0">Back</a>
+    {% if request.method == 'POST' %}
+        <p class='green white-text'>Vocabulary added Successfully</p>
+    {% endif %}
+    <form action="" method='POST' class='row'>
+        {% csrf_token %}
+        <label>Add new vocabulary</label>
+        <input type="text" name='title' class='col s12' placeholder='Vocabulary name' required>
+        <input type="text" name='meaning' class='col s12' placeholder='Vocabulary meaning' required>
+        <button class="btn light-blue col s12 z-depth-0">Add</button>
+    </form>
+</body>
+
+</html>

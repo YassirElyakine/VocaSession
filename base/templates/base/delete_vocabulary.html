@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <title>Edit vocabulary</title>
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- delete_vocabulary.html file LOCAL -->
+    <link rel='stylesheet' type='text/css' href='{% static "stylesheets/delete_vocabulary.css" %}'>
+    </head>
+
+<body>
+    <a href='/' class="btn light-blue z-depth-0">Back</a>
+    {% if request.method == 'POST' %}
+        <p class='green white-text'>Vocabulary deleted Successfully</p>
+    {% endif %}
+    <form method='POST' class='row'>
+        {% csrf_token %}
+        <label>Delete vocabulary</label>
+        <input type="text" name='title' class='col s12' placeholder='Vocabulary name' required>
+        <button class="btn red col s12 z-depth-0" required>Remove vocabulary</button>
+    </form>
+</body>
+
+</html>

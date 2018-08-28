@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <title>Login</title>
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- login.css file LOCAL -->
+    <link rel='stylesheet' type='text/css' href='{% static "stylesheets/login.css" %}'>
+</head>
+
+<body>
+    <form action="/login/" method='POST' class='row'>
+        {% csrf_token %}
+        <label>Welcome creator, please login to start a new session</label>
+        <input type="text" name='username' placeholder='username'>
+        <input type="password" name='password' placeholder='password'>
+        <button class='btn light-blue z-depth-0 col s12'>Start VocaSession</button>
+    </form>
+</body>
+
+</html>

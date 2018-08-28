@@ -1,0 +1,55 @@
+div.actions_area {
+    display: flex;
+    padding-top: 25px;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+div.actions_area > button {
+    margin-right: 20px;
+    transition: 50ms all linear;
+    flex-basis: 20%;
+    position: relative;
+    top: 0;
+}
+div.actions_area > button:hover {
+    top: 10px;
+}
+div.vocabulary_showcase_container {
+    padding: 8px;
+    margin: 25px auto;
+}
+div.vocabulary_showcase_container > div.vocabulary_showcase {
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-left: 5px solid #03A9F4;
+    transition: 100ms all linear;
+}
+div.vocabulary_showcase_container > div.vocabulary_showcase > span.vocabulary_name {
+    font-size: 25px;
+    font-weight: bolder;
+}
+div.vocabulary_showcase_container > div.vocabulary_showcase > div.vocabulary_meaning {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.vocabulary_showcase_container > div.vocabulary_showcase > button.btn {
+    width: 100%;
+    transition: 100ms all linear;
+}
+div.vocabulary_showcase_container > div.vocabulary_showcase > button.btn:hover {
+    background-color: transparent;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer > button.btn {
+    width: 100%;
+}
+@media(max-width:425px) {
+    div.vocabulary_showcase_container > div.vocabulary_showcase {
+        border: 0;
+    }
+}
